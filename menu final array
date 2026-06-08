@@ -1,0 +1,336 @@
+using System;
+using System.Linq;
+
+public class menu_final
+{
+    public static void Main(String[] Args)
+    {
+        
+        System.Console.WriteLine("----MENU TALLER ARRAYS ----");
+        System.Console.WriteLine("Ejercicio 1 ");
+        System.Console.WriteLine("Ejercicio 2 ");
+        System.Console.WriteLine("Ejercicio 3 ");
+        System.Console.WriteLine("Ejercicio 4 ");
+        System.Console.WriteLine("Ejercicio 5 ");
+        System.Console.WriteLine("Ejercicio 6 ");
+        System.Console.WriteLine("Ejercicio 7 ");
+        System.Console.WriteLine("Ejercicio 8 ");
+        System.Console.WriteLine("Ejercicio 9 ");
+        System.Console.WriteLine("Ejercicio 10 ");
+        System.Console.WriteLine("Ejercicio 11");
+        System.Console.WriteLine("Ejercicio 12 ");
+        System.Console.WriteLine("Ejercicio 13 ");
+        System.Console.WriteLine("Ejercicio 14 ");
+        System.Console.WriteLine("Ejercicio 15 ");
+        System.Console.WriteLine("Ejercicio 16 ");
+        System.Console.WriteLine("Ejercicio 17 ");
+        System.Console.WriteLine("Ejercicio 18 ");
+        System.Console.WriteLine("Ejercicio 19 ");
+        System.Console.WriteLine("Ejercicio 20 ");
+    
+        System.Console.WriteLine("seleccione el ejercicio al que quiere entrar:");
+        int menu = Convert.ToInt32(Console.ReadLine());
+
+        switch (menu)
+        {
+            case 1:
+            string [] dias = {"lunes" , "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"};
+    double [] temperaturas = {22, 23.5,18.3,25,26,27,25};
+
+    
+
+    temperaturas[2] = 25;
+
+    System.Console.WriteLine(temperaturas[2]);
+    break;
+
+    case 2:
+
+        int [] fibonacci = new int [10];
+
+    fibonacci[0] = 0;
+    fibonacci[1] = 1;
+
+    for (int i = 2; i<10; i++)
+        {
+            fibonacci[i] = fibonacci [i-2] + fibonacci[i-1];
+        }
+
+    for (int i= 0; i<10; i++)
+            {
+                System.Console.WriteLine(fibonacci[i]);
+            }
+            break;
+
+            case 3:
+                string [] ciudades = {"Bogota" , "medellin", "cali", "bucaramanga", "cartagena", "villavicencio" };
+
+        System.Console.WriteLine(ciudades.Length);
+            break;
+                
+            case 4:
+                double suma = 0;
+    double[] notas = {4.5,3.4,2.2, 0.5, 5, 4.2, 1.1, 3};
+    
+    foreach (double nota in notas)
+        {
+            suma = suma + nota;
+        }
+
+        double promedio = suma/notas.Length;
+
+        System.Console.WriteLine($"su promedio es de: {promedio:F2}");
+            break;
+                
+            case 5:
+                int [] enteros = {5,20,15,9,3,7,14};
+
+    
+     System.Console.WriteLine("indique un numero del 1 al 20: ");
+     int numero=Convert.ToInt32(Console.ReadLine());
+
+    bool encontrado = false;
+     for (int i=0; i<enteros.Length; i++)
+        {
+            if (enteros[i] == numero)
+            {
+            System.Console.WriteLine($"el numero si esta dentro del array en el indice {i}" );
+            encontrado = true;
+            }
+            
+        }
+        if (encontrado == false)
+        {
+            System.Console.WriteLine("el numero no esta en el array");
+        }
+            break;
+                
+            case 6:
+                int [] montos = {300, 200, 400, 150, 12000, 50};
+
+    Array.Sort(montos);
+
+    foreach (int monto in montos)
+    System.Console.WriteLine(monto);
+            break;
+                
+            case 7:
+                int[] edades = {20,33,18,50,5,22};
+
+        System.Console.WriteLine(edades.Max());
+        System.Console.WriteLine(edades.Min());
+        System.Console.WriteLine(edades.Sum());
+            break;
+                
+            case 8:
+                int [] precios = {25, 52, 10, 80, 150};
+        var mayores = precios.Where(n => n > 50);
+
+        foreach (int mayor in mayores)
+        {
+            System.Console.WriteLine(mayor);
+        }
+            break;
+                
+            case 9:
+                string [] numeros = {"uno", "dos", "tres","cuatro"};
+        string [] invertido = new string [numeros.Length];
+        
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            invertido[i] = numeros[numeros.Length-1-i];
+
+            System.Console.WriteLine(invertido[i]);
+        }
+            break;
+                
+            case 10:
+                double[] notas1 = { 4.5, 3.0, 2.5, 3.8, 1.5, 4.2, 2.8, 3.5, 5.0, 2.0 };
+        int aprobados = 0;
+
+        foreach (double nota1 in notas1)
+        {
+            if (nota1 >= 3.0)
+            {
+                aprobados++;
+            }
+        }
+
+        double porcentaje = (double)aprobados / notas1.Length * 100;
+
+        Console.WriteLine($"Total de estudiantes: {notas1.Length}");
+        Console.WriteLine($"Aprobados: {aprobados}");
+        Console.WriteLine($"Porcentaje de aprobados: {porcentaje}%");
+            break;
+                
+            case 11:
+                for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine($"--- Tabla del {i} ---");
+            for (int j = 1; j <= 10; j++)
+            {
+                Console.WriteLine($"{i} x {j} = {i * j}");
+            }
+            Console.WriteLine();
+        }
+            break;
+                
+            case 12:
+                int altura = 5;
+
+        for (int i = 1; i <= altura; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+            break;
+                
+            case 13:
+                int[] array1 = { 1, 3, 5, 7, 9, 11 };
+        int[] array2 = { 2, 3, 6, 7, 10, 11 };
+
+        Console.WriteLine("Elementos en común:");
+
+        for (int i = 0; i < array1.Length; i++)
+        {
+            for (int j = 0; j < array2.Length; j++)
+            {
+                if (array1[i] == array2[j])
+                {
+                    Console.WriteLine(array1[i]);
+                }
+            }
+        }
+            break;
+                
+            case 14:
+                int[] numeros1 = { 4, 7, 2, 9, 7, 3, 4, 8, 2, 5 };
+
+        Console.WriteLine("Números duplicados encontrados:");
+
+        for (int i = 0; i < numeros1.Length; i++)
+        {
+            for (int j = i + 1; j < numeros1.Length; j++)
+            {
+                if (numeros1[i] == numeros1[j])
+                {
+                    Console.WriteLine($"El número {numeros1[i]} está duplicado (posiciones {i} y {j})");
+                }
+            }
+        }
+            break;
+                
+            case 15:
+                int tamano = 3;
+
+        for (int i = 0; i < tamano; i++)
+        {
+            for (int j = 0; j < tamano; j++)
+            {
+                if (i == j)
+                {
+                    Console.Write("1 ");
+                }
+                else
+                {
+                    Console.Write("0 ");
+                }
+            }
+            Console.WriteLine();
+        }
+            break;
+                
+            case 16:
+                bool[,] asistencia = new bool[3, 5];
+
+        asistencia[1, 4] = true;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                Console.Write(asistencia[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+            break;
+                
+            case 17:
+                double[,] precios1 = {
+            { 1500, 2300, 4500 },
+            { 1450, 2400, 4600 }
+        };
+
+        Console.WriteLine($"Precio del segundo producto en la primera tienda: {precios1[0, 1]}");
+            break;
+                
+            case 18:
+                int[,] matriz = {
+            { 1, 2, 3, 4 },
+            { 5, 6, 7, 8 },
+            { 9, 10, 11, 12 },
+            { 13, 14, 15, 16 }
+        };
+
+        for (int i = 0; i < 4; i++)
+        {
+            int suma1 = 0;
+            for (int j = 0; j < 4; j++)
+            {
+                suma1 += matriz[i, j];
+            }
+            Console.WriteLine($"Suma de la fila {i}: {suma1}");
+        }
+            break;
+                
+            case 19:
+                string[,] mapa = {
+            { "Desconocido", "Desconocido" },
+            { "Desconocido", "Desconocido" }
+        };
+
+        Console.Write("Ingrese la fila (0 o 1): ");
+        int fila = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese la columna (0 o 1): ");
+        int columna = Convert.ToInt32(Console.ReadLine());
+
+        mapa[fila, columna] = "Explorado";
+
+        Console.WriteLine("\nMapa actualizado:");
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                Console.Write(mapa[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+            break;
+                
+            case 20:
+                int[,] ventas = {
+            { 1200, 850, 1500, 600 },
+            { 1100, 900, 1600, 700 },
+            { 1300, 950, 1700, 800 },
+            { 1400, 1000, 1800, 900 }
+        };
+
+        int totalMes2 = 0;
+        for (int j = 0; j < ventas.GetLength(1); j++)
+        {
+            totalMes2 += ventas[1, j];
+        }
+        Console.WriteLine($"Total de ventas del mes 2: {totalMes2}");
+
+        int maximo = ventas.Cast<int>().Max();
+        Console.WriteLine($"Venta más alta en toda la matriz: {maximo}");
+            break;
+
+        }
+
+    }
+}
