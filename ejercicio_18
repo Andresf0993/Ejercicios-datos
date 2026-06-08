@@ -1,0 +1,19 @@
+using System;
+public class caso_7
+{
+    public static void Main(String[]Args)
+    {
+        string correo;
+
+        Console.WriteLine("Indique su correo electrinuco: ");
+        correo = Console.ReadLine();
+
+        int charPos = correo.IndexOf("@");
+
+        string dominio = correo.Substring(charPos);
+        string usuario = correo.Substring(0, charPos);
+
+        Console.WriteLine(usuario);
+        Console.WriteLine(dominio);
+    }
+}
