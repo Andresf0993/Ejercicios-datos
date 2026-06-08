@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+public class ejercicio_1
+{
+    public static void Main(String[]Arg)
+{
+    int [] fibonacci = new int [10];
+
+    fibonacci[0] = 0;
+    fibonacci[1] = 1;
+
+    for (int i = 2; i<10; i++)
+        {
+            fibonacci[i] = fibonacci [i-2] + fibonacci[i-1];
+        }
+
+    for (int i= 0; i<10; i++)
+            {
+                System.Console.WriteLine(fibonacci[i]);
+            }
+
+}
+}
+
