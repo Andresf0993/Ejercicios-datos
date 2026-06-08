@@ -1,0 +1,26 @@
+using System;
+namespace Miejercicio2
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+
+            double tiempo_horas_exactas;
+            int tiempo_horas_enteras;
+
+            Console.WriteLine("Ingresa la cantidad total de minutos que le tomará aprovisionar la nueva infraestructura: ");
+            int min= Convert.ToInt32(Console.ReadLine());
+            
+            tiempo_horas_exactas = min / 60.0;
+             
+             tiempo_horas_enteras= (int)tiempo_horas_exactas;
+
+             Console.WriteLine("horas exactas son: " + tiempo_horas_exactas);
+             Console.WriteLine("horas enteras: " + tiempo_horas_enteras);
+
+
+
+        }
+    }
+}
