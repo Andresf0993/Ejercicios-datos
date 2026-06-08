@@ -1,0 +1,28 @@
+using System;
+public class caso_4
+{
+    public static void Main(String[]Args)
+    {
+        double nivel;
+        Console.WriteLine("indique el nivel de humedad:");
+        double.TryParse(Console.ReadLine(), out nivel);
+
+        if (nivel < 30)
+        {
+        Console.WriteLine("Activar riesgo intensivo.");
+        }
+        else if ( nivel >= 30   && nivel <= 60)
+            {
+            Console.WriteLine("Activar riego por goteo lento");
+            }
+
+            else if (nivel > 60)
+            {
+            Console.WriteLine("Sistema de riego apagado"); 
+            }
+    
+
+        
+    
+}
+}
