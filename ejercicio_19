@@ -1,0 +1,20 @@
+using System;
+public class caso_8
+{
+    public static void Main(String[] Args)
+    {
+        double costo;
+
+        Console.WriteLine("indique el costo de su matricula: ");
+        double.TryParse(Console.ReadLine(), out costo);
+        
+        double descuento = costo*0.15;
+        double desc = Math.Ceiling(descuento);
+
+        string recibo = $"El valor a pagar con un descuento del 15% es de: {desc} ";
+
+        Console.WriteLine(recibo);
+
+
+    }
+}
