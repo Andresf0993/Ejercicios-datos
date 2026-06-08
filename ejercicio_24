@@ -1,0 +1,37 @@
+using System;
+
+public class ejercicio_1
+{
+
+class Car
+    {
+
+        string color,model;
+        int year;
+    public static void Main(String[]Args)
+    {
+
+
+        Car myObj1 = new Car();
+        myObj1.model = "Mustang";
+        myObj1.color = "Verde";
+        myObj1.year = 1969;   
+
+        Car myObj2 = new Car();
+        myObj2.model = "Astra";
+        myObj2.color = "white";
+        myObj2.year = 2005;
+
+       
+       Console.WriteLine("carro Mustang");
+       Console.WriteLine( myObj1.model);
+       Console.WriteLine(myObj1.color);
+       Console.WriteLine(myObj1.year);
+
+       Console.WriteLine("carro Astra");
+       Console.WriteLine( myObj2.model);
+       Console.WriteLine(myObj2.color);
+       Console.WriteLine(myObj2.year);
+    }
+    }
+}
