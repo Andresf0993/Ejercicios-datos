@@ -1,0 +1,31 @@
+using System;
+using System.Linq.Expressions;
+public class ejercicio_1
+{
+    public static void Main(String[]Args)
+    {
+        string licencia;
+        int tiempo;
+
+        
+        Console.WriteLine("tiene licencia?");
+        licencia=Console.ReadLine();
+
+        Console.WriteLine("cuantos tiempo tiene la licencia");  
+        tiempo=Convert.ToInt32(Console.ReadLine());
+
+        if (licencia == "si" && tiempo >= 2)    // condicional licencia y tiempo
+        {
+            Console.WriteLine("puede aplicar al puesto ");
+        }
+        
+        else {     // si es menor a 2
+    
+    
+        Console.WriteLine("no puede aplicar");
+    }
+    }
+    
+
+
+}
