@@ -1,0 +1,16 @@
+using System;
+
+public class caso_8
+{
+    public static void Main(String[]Args)
+    {
+    
+        int[] myNumbers = {5,1,8,9};
+        
+        
+            Console.WriteLine(myNumbers.Max());
+            Console.WriteLine(myNumbers.Min());
+            Console.WriteLine(myNumbers.Sum());
+        
+        }
+    }
