@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+using System.Linq;
+public class ejercicio_3
+{
+    public static void Main (String[] Args)
+    {
+        int[] edades = {20,33,18,50,5,22};
+
+        System.Console.WriteLine(edades.Max());
+        System.Console.WriteLine(edades.Min());
+        System.Console.WriteLine(edades.Sum());
+    }
+}
