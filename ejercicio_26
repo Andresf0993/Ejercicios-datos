@@ -1,0 +1,59 @@
+using System;
+using System.Drawing;
+using System.Runtime.CompilerServices;
+
+public class ejercicio_4
+{
+
+class Moto
+    {
+    string color,marca;
+    int maxSpeed;
+    int cilindraje;
+    public static void Main(String[]Args)
+    {
+
+        
+        Moto Kawazaki = new Moto();
+        Kawazaki.marca = "kawazaki";
+        Kawazaki.color = "Verde";
+        Kawazaki.maxSpeed = 250;
+        Kawazaki.cilindraje = 500;
+        Kawazaki.fullthrottle();
+        Kawazaki.brake();
+
+        Console.WriteLine($"Las caracteristicas de la moto {Kawazaki.marca} son: \n Color: {Kawazaki.color} \n Velocidad Max: {Kawazaki.maxSpeed} \n Cilindraje: {Kawazaki.cilindraje}");
+
+
+        Moto Royal = new Moto();
+        Royal.marca = "Royal";
+        Royal.color = "Roja";
+        Royal.maxSpeed = 180;
+        Royal.cilindraje = 350;
+        Royal.fullthrottle();
+        Royal.brake();
+        Console.WriteLine($"Las caracteristicas de la moto son: \n Color: {Royal.color} \n Velocidad Max: {Royal.maxSpeed} \n Cilindraje: {Royal.cilindraje}");
+
+
+        Moto BMW = new Moto();
+        BMW.marca = "BMW";
+        BMW.color = "Rosa con flores";
+        BMW.maxSpeed = 280;
+        BMW.cilindraje = 1200;
+        BMW.fullthrottle();
+        BMW.brake();
+        Console.WriteLine($"Las caracteristicas de la moto son: \n Color: {BMW.color} \n Velocidad Max: {BMW.maxSpeed} \n Cilindraje: {BMW.cilindraje}");
+    }
+
+public  void fullthrottle()
+        {
+            Console.WriteLine($"La {this.color} moto acelera tan rapido como puede ");
+
+        }
+public  void brake()
+        {
+            Console.WriteLine($"La {this.marca} moto frena tan rapido como pueden ");
+            
+        }
+    }
+}
