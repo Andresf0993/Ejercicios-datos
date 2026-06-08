@@ -1,0 +1,28 @@
+using System;
+public class caso_2
+{
+    public static void Main(String[]Args)
+    {
+        double temp;
+        Console.WriteLine("indique su temperatura corporal:");
+        double.TryParse(Console.ReadLine(), out temp);
+
+        if (temp >= 39)
+        {
+        Console.WriteLine("Urgencia: fiebra alta");
+        }
+        else if ( temp >= 37.5   && temp <= 39)
+            {
+            Console.WriteLine("Fiebre leve");
+            }
+
+            else if (temp < 37.5)
+            {
+            Console.WriteLine("estado normal"); 
+            }
+    
+
+        
+    
+}
+}
