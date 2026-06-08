@@ -1,0 +1,36 @@
+using System;
+using System.Linq.Expressions;
+public class ejercicio_1
+{
+    public static void Main(String[]Args)
+    {
+        string dia1, dia2; // variables
+
+        
+        Console.WriteLine("ingrese el dia "); 
+        dia1=Console.ReadLine();
+
+        Console.WriteLine("ingrese el dia ");
+        dia2=Console.ReadLine();
+
+        if (dia1 == "sabado" || dia2 == "domingo") // condicional para fin de semana 
+        {
+            Console.WriteLine("es fin de semana ");
+        }
+        
+        else if (dia1 != "sabado" || dia2 != "domingo"  )  // condicional si es un dia entre semana y fin de semana 
+        {
+        Console.WriteLine("error ");
+        }
+
+
+        else {     // entre semana
+    
+    
+        Console.WriteLine("es entre semana ");
+    }
+    }
+    
+
+
+}
