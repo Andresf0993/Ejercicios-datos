@@ -1,0 +1,20 @@
+using System;
+using System.Runtime.InteropServices;
+
+public class Ejercicio_3
+{
+public static void Main(string[] args)
+{
+    double tiempo;
+
+    Console.WriteLine ( "cuantos tiempo de experiencia tiene como ingeniero?");
+    double.TryParse(Console.ReadLine(), out tiempo);
+
+bool senor = tiempo >= 5;
+bool mid = tiempo < 5;
+
+Console.WriteLine ( "eres nivel senor: "+ senor);
+Console.WriteLine ( "eres nivel mid: "+ mid);
+    
+}
+}
