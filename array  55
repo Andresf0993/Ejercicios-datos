@@ -1,0 +1,13 @@
+using System;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+public class ejercicio_3
+{
+    public static void Main (String[] Args)
+    {
+        string [] ciudades = {"Bogota" , "medellin", "cali", "bucaramanga", "cartagena", "villavicencio" };
+
+        System.Console.WriteLine(ciudades.Length);
+    }
+   
+}
