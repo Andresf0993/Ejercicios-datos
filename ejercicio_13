@@ -1,0 +1,25 @@
+using System;
+using System.Reflection;
+public class caso_2
+{
+    public static void Main(string[]Args)
+    {
+
+    double nota1,nota2;
+
+        Console.WriteLine("ingrese la primera nota: ");
+        double.TryParse(Console.ReadLine(),out nota1);
+
+        Console.WriteLine(" ingrese la segunda nota: ");
+        double.TryParse(Console.ReadLine(), out nota2);
+
+        double suma, prome;
+
+        suma = nota1 + nota2;
+        prome = suma/2;
+
+        Console.WriteLine("el promedio es de : "+ Math.Round(prome));
+        Console.WriteLine("su nota mas alta fue de: " + Math.Max(nota1,nota2));
+        
+    }
+} 
