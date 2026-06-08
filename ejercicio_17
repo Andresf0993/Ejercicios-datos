@@ -1,0 +1,15 @@
+using System;
+public class caso_6
+{
+    public static void Main(String[]Args)
+    {
+        string nombre, apellido;
+
+        Console.WriteLine("indique su nombre:");
+        nombre = Console.ReadLine();
+        Console.WriteLine("indique su apellido:");
+        apellido = Console.ReadLine();
+
+        Console.WriteLine("el avatar: " + nombre[0].ToString() + apellido[0].ToString());
+    }
+}
