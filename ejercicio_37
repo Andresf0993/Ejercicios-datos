@@ -1,0 +1,28 @@
+using System;
+public class caso_5
+{
+    public static void Main(String[]Args)
+    {
+        double peso;
+        Console.WriteLine("indique el peso del paquete:");
+        double.TryParse(Console.ReadLine(), out peso);
+
+        if (peso <= 5)
+        {
+        Console.WriteLine("Tarifa basica.");
+        }
+        else if ( peso >= 5.1   && peso <= 20)
+            {
+            Console.WriteLine("Tarifa intermedia.");
+            }
+
+            else if (peso > 20)
+            {
+            Console.WriteLine("Tarifa de carga pesada."); 
+            }
+    
+
+        
+    
+}
+}
