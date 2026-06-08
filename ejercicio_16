@@ -1,0 +1,23 @@
+using System;
+public class caso_5
+{
+public static void Main(String[]Args)
+    {
+
+        double  puerto;
+        string estado,ip;
+
+        Console.WriteLine("indique la direccion IP");
+        ip = Console.ReadLine();
+
+        Console.WriteLine("indique el puerto");
+        double.TryParse(Console.ReadLine() , out puerto);
+        Console.WriteLine("indique el estado del servicio");
+        estado = Console.ReadLine();
+        
+        
+        string formato = $"Direccio ip : {ip} en el puerto: {puerto} estado de servidor: {estado}";
+
+        Console.WriteLine(formato);
+    }
+}
