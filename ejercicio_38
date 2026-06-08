@@ -1,0 +1,35 @@
+using System;
+public class caso_7
+{
+    public static void Main(String[]Args)
+    {
+        double nota1, nota2, nota3;
+        Console.WriteLine("indique su nota 1 :");
+        double.TryParse(Console.ReadLine(), out nota1);
+
+        Console.WriteLine("indique su nota 2 :");
+        double.TryParse(Console.ReadLine(), out nota2);
+
+        Console.WriteLine("indique su nota 3 :");
+        double.TryParse(Console.ReadLine(), out nota3);
+
+    double suma= nota1 + nota2+ nota3;
+        double promedio = suma/3;
+
+
+        if (promedio >= 4.5)
+        {
+        Console.WriteLine($"Su promedio es: {promedio} \n Estado: Becado por Excelencia");
+        }
+        else if ( promedio >= 3.0  && promedio <= 4.4)
+            {
+            Console.WriteLine($"Su promedio es: {promedio} \n Estado: Aprovado");
+            }
+
+            else if (promedio < 3)
+            {
+            Console.WriteLine($"Su promedio es: {promedio} \n Estado: Reprovado"); 
+            }
+    
+}
+}
