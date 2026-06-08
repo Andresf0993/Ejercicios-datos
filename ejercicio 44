@@ -1,0 +1,11 @@
+using System;
+
+public class caso_4
+{
+    public static void Main(String[]Args)
+    {
+        string[] cars = {"volvo", "BMW", "Ford", "Mazda"};
+        cars[0] = "Opel";
+        Console.WriteLine(cars[0]);
+        }
+    }
