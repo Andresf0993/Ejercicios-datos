@@ -1,0 +1,19 @@
+using System;
+public class caso_3
+{
+    public static void Main(String[]Args)
+    {
+        string nombre;
+
+        Console.WriteLine("Ingrese el nombre del servidor:");
+        nombre = Console.ReadLine();
+
+        bool mayor = (nombre.Length>15 );
+
+        
+
+    
+        Console.WriteLine("el nombre es mayor a 15 caracteres?"+ mayor) ;
+        Console.WriteLine("Nombre estandarizado" + nombre.ToLower() );
+    }
+}
