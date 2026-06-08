@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+using System.Linq;
+
+public class ejercicio_3
+{
+    public static void Main (String[] Args)
+    {
+        int [] precios = {25, 52, 10, 80, 150};
+        var mayores = precios.Where(n => n > 50);
+
+        foreach (int mayor in mayores)
+        {
+            System.Console.WriteLine(mayor);
+        }
+    }
+}
