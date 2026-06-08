@@ -1,0 +1,261 @@
+using System;
+using System.Collections;
+public class caso_1
+{
+    public static  void Main(String[]Args)
+    {
+    
+    
+System.Console.WriteLine("-----Menú ejercicios condicionales-----");
+
+            System.Console.WriteLine("1.Sector Financiero (Banca)");
+            System.Console.WriteLine("2.Sector Salud (Triaje Médico)");
+            System.Console.WriteLine("3.Sector Comercio (Retail)");
+            System.Console.WriteLine("4.Sector Agrícola (Riego Automatizado)");
+            System.Console.WriteLine("5. Sector Logística y Transporte");
+            System.Console.WriteLine("6. Sector Energético");
+            System.Console.WriteLine("7. Sector Educación (Académico)");
+            System.Console.WriteLine("8. Sector Manufactura (Control de Calidad)");
+            System.Console.WriteLine("9. Sector Turismo y Hotelería");
+            System.Console.WriteLine("10. Sector Tecnológico (Ciberseguridad)");
+
+            System.Console.WriteLine("Elija una opción:");
+            int eleccion=int.Parse(Console.ReadLine());
+
+            switch(eleccion)
+        {
+            case 1:
+
+            int puntaje;
+        Console.WriteLine("indique su puntaje:");
+        puntaje=Convert.ToInt32(Console.ReadLine());
+
+        if (puntaje >= 800)
+        {
+        Console.WriteLine("Aprovado con tasa preferencial.");
+        }
+        else if ( puntaje >= 600 && puntaje <= 799)
+            {
+            Console.WriteLine("Aprovado con tasa estandar.");
+            }
+
+            else if (puntaje < 600)
+            {
+            Console.WriteLine("credito denegado"); 
+            }
+    
+        
+        break;
+
+        case 2:
+            double temp;
+        Console.WriteLine("indique su temperatura corporal:");
+        double.TryParse(Console.ReadLine(), out temp);
+
+        if (temp >= 39)
+        {
+        Console.WriteLine("Urgencia: fiebra alta");
+        }
+        else if ( temp >= 37.5   && temp <= 39)
+            {
+            Console.WriteLine("Fiebre leve");
+            }
+
+            else if (temp < 37.5)
+            {
+            Console.WriteLine("estado normal"); 
+            }
+        break;
+
+        case 3:
+
+         int monto;
+        double descu;
+        Console.WriteLine("Ingrese el valor de su compra: ");
+        monto = Convert.ToInt32(Console.ReadLine());
+        
+        if (monto > 500000) 
+        {
+            descu= monto * 0.20;
+            Console.WriteLine("Su descuento es: " + descu);
+        } 
+        else if ((monto >= 200000) && (monto <= 500000)) 
+        {
+             descu= monto * 0.10;
+            Console.WriteLine("Su descuento es: " + descu);
+        } 
+        else if (monto < 200000) 
+        {
+            Console.WriteLine("Sin descuento");
+        } 
+        break;
+
+        case 4:
+        double nivel;
+        Console.WriteLine("indique el nivel de humedad:");
+        double.TryParse(Console.ReadLine(), out nivel);
+
+        if (nivel < 30)
+        {
+        Console.WriteLine("Activar riesgo intensivo.");
+        }
+        else if ( nivel >= 30   && nivel <= 60)
+            {
+            Console.WriteLine("Activar riego por goteo lento");
+            }
+
+            else if (nivel > 60)
+            {
+            Console.WriteLine("Sistema de riego apagado"); 
+            }
+            break;
+
+        case 5:
+        double peso;
+        Console.WriteLine("indique el peso del paquete:");
+        double.TryParse(Console.ReadLine(), out peso);
+
+        if (peso <= 5)
+        {
+        Console.WriteLine("Tarifa basica.");
+        }
+        else if ( peso >= 5.1   && peso <= 20)
+            {
+            Console.WriteLine("Tarifa intermedia.");
+            }
+
+            else if (peso > 20)
+            {
+            Console.WriteLine("Tarifa de carga pesada."); 
+            }
+            break;
+
+            case 6:
+             int consumo;
+        
+        Console.WriteLine("Ingrese el consumo electrico: ");
+        consumo = Convert.ToInt32(Console.ReadLine());
+        
+        if (consumo <150) 
+        {
+            Console.WriteLine("Consumo bajo (Aplica subsidio total)");
+        } 
+        else if ((consumo >= 150) && (consumo <= 300)) 
+        {
+
+            Console.WriteLine("Consumo moderado (Subsidio parcial)");
+        } 
+        else if (consumo >300) 
+        {
+            Console.WriteLine("Consumo alto (Sin subsidio)");
+        } 
+        break;
+
+        case 7:
+        double nota1, nota2, nota3;
+        Console.WriteLine("indique su nota 1 :");
+        double.TryParse(Console.ReadLine(), out nota1);
+
+        Console.WriteLine("indique su nota 2 :");
+        double.TryParse(Console.ReadLine(), out nota2);
+
+        Console.WriteLine("indique su nota 3 :");
+        double.TryParse(Console.ReadLine(), out nota3);
+
+    double suma= nota1 + nota2+ nota3;
+        double promedio = suma/3;
+
+
+        if (promedio >= 4.5)
+        {
+        Console.WriteLine($"Su promedio es: {promedio} \n Estado: Becado por Excelencia");
+        }
+        else if ( promedio >= 3.0  && promedio <= 4.4)
+            {
+            Console.WriteLine($"Su promedio es: {promedio} \n Estado: Aprovado");
+            }
+
+            else if (promedio < 3)
+            {
+            Console.WriteLine($"Su promedio es: {promedio} \n Estado: Reprovado"); 
+            }
+            break;
+
+            case 8:
+            double error;
+        
+        Console.WriteLine("Ingrese el margen de error en mm: ");
+        error = Convert.ToDouble(Console.ReadLine());
+        
+        if (error <= 0.1) 
+        {
+            Console.WriteLine("Pieza Premium");
+        } 
+        else if ((error >= 0.11) && (error <= 0.5)) 
+        {
+
+            Console.WriteLine("Pieza Estándar");
+        } 
+        else if (error >0.5) 
+        {
+            Console.WriteLine("Pieza Defectuosa / Reciclaje");
+        } 
+        break;
+
+        case 9:
+        string mes;
+        
+        
+        Console.WriteLine("indique el mes del year:");
+        mes = Console.ReadLine();
+        
+        if (mes == "diciembre" || mes == "enero" || mes == "junio")
+        {
+        Console.WriteLine("Temporada Alta (Tarifa +30%)");
+        }
+
+        else if ( mes == "semana santa")
+            {
+            Console.WriteLine("Temporada Especial (Tarifa +50%)");
+            }
+
+            else if (mes == "febrero" || mes == "marzo" || mes == "mayo" || mes == "julio" || mes == "agosto" || mes == "septiembre"|| mes == "octubre" || mes == "noviembre")
+            {
+            Console.WriteLine("Temporada Baja (Tarifa base)"); 
+            }
+
+            else 
+        {
+            Console.WriteLine("mes incorrecto, intente de nuevo "); 
+        }
+        break;
+
+        case 10:
+
+         int seguridad;
+        
+        Console.WriteLine("Ingrese la longitud de contrasena: ");
+        seguridad = Convert.ToInt32(Console.ReadLine());
+        
+        if (seguridad >= 12) 
+        {
+            Console.WriteLine("Seguridad Alta");
+        } 
+        else if ((seguridad >= 8) && (seguridad <= 11)) 
+        {
+
+            Console.WriteLine("Seguridad Media");
+        } 
+        else if (seguridad <8) 
+        {
+            Console.WriteLine("Seguridad Inaceptable");
+        } 
+
+        break;
+
+    }
+}
+}
+
+                
+            
