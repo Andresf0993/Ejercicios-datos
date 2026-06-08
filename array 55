@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+public class ejercicio_3
+{
+    public static void Main (String[] Args)
+    {
+    double suma = 0;
+    double[] notas = {4.5,3.4,2.2, 0.5, 5, 4.2, 1.1, 3};
+    
+    foreach (double nota in notas)
+        {
+            suma = suma + nota;
+        }
+
+        double promedio = suma/notas.Length;
+
+        System.Console.WriteLine($"su promedio es de: {promedio:F2}");
+    }
+}
+
