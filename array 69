@@ -1,0 +1,30 @@
+using System;
+
+public class ejercicio_10
+{
+    public static void Main(String[] Args)
+    {
+        string[,] mapa = {
+            { "Desconocido", "Desconocido" },
+            { "Desconocido", "Desconocido" }
+        };
+
+        Console.Write("Ingrese la fila (0 o 1): ");
+        int fila = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese la columna (0 o 1): ");
+        int columna = Convert.ToInt32(Console.ReadLine());
+
+        mapa[fila, columna] = "Explorado";
+
+        Console.WriteLine("\nMapa actualizado:");
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                Console.Write(mapa[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
