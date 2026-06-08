@@ -1,0 +1,107 @@
+using System;
+
+namespace parcial1_2
+{
+    class Program 
+    {
+        static int tiempoTotalEspera = 0;
+
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.WriteLine("===========================================");
+            Console.WriteLine("   EPS - GESTOR DE TURNOS Y TRIAGE (G-TURN)");
+            Console.WriteLine("===========================================\n");
+
+            //entramos los datos
+            Console.Write("Ingrese el nombre completo del paciente: ");
+            string nombre = Console.ReadLine();
+
+            Console.Write("Ingrese el número de documento de identidad: ");
+            long documento = long.Parse(Console.ReadLine());
+
+            Console.Write("Tipo de atención (M=Medicina, O=Odontología, L=Laboratorio): ");
+            char tipoAtencion = char.ToUpper(Console.ReadLine()[0]);
+
+            Console.Write("Hora de llegada en formato militar (ej: 1430): ");
+            string horaLlegadaStr = Console.ReadLine();
+
+            Console.Write("Nivel de triage (1=Urgente, 2=Medio, 3=Bajo): ");
+            int triage = int.Parse(Console.ReadLine());
+
+            // ---------- 2. MANIPULACIÓN DE STRINGS ----------
+            nombre = nombre.Trim().ToUpper();
+
+            string horasStr = horaLlegadaStr.Substring(0, 2);
+            string minutosStr = horaLlegadaStr.Substring(2, 2);
+
+            // ---------- 3. CASTING ----------
+            int horas = int.Parse(horasStr);
+            int minutos = int.Parse(minutosStr);
+
+            
+            // Cada bool se convierte a 1 (true) o 0 (false) con Convert.ToInt32.
+            // Solo uno de los tres será 1, los demás 0, por lo que la suma
+            // da el valor correcto sin necesidad de if/switch.
+            bool esTriage1 = (triage == 1);
+            bool esTriage2 = (triage == 2);
+            bool esTriage3 = (triage == 3);
+
+            int minutosAdicionales =
+                  15 * Convert.ToInt32(esTriage1)
+                + 45 * Convert.ToInt32(esTriage2)
+                + 90 * Convert.ToInt32(esTriage3);
+
+            // Validación implícita: si triage no es 1, 2 ni 3,
+            // 'esValido' será false y minutosAdicionales será 0.
+            bool esValido = esTriage1 || esTriage2 || esTriage3;
+
+            // ---------- 5. SUMA DE MINUTOS Y AJUSTE DE HORA SIN IF ----------
+            // Se acumulan los minutos con +=
+            minutos += minutosAdicionales;
+     // En vez de "while (minutos >= 60) ...", usamos división entera:
+            //   horasExtra = minutos / 60   (cuántas horas completas hay)
+            //   minutos    = minutos % 60   (residuo: minutos restantes)
+            int horasExtra = minutos / 60;
+            minutos = minutos % 60;
+            horas += horasExtra;
+
+            // Ajuste a formato militar (si pasa de 23 vuelve a 0..23) sin if:
+            horas = horas % 24;
+
+            // ---------- 6. ACUMULADORES CON += y *= ----------
+            tiempoTotalEspera += minutosAdicionales;
+
+            int indiceCongestion = 1;
+            indiceCongestion *= 2;
+
+            // ---------- 7. FORMATO DEL TICKET ----------
+            string docStr = documento.ToString();
+            string primeros2Doc = docStr.Substring(0, 2);
+            string minutosLlegada = horaLlegadaStr.Substring(2, 2);
+
+            // Formato HH:MM con dos dígitos
+            string horaFormateada = horas.ToString("D2") + ":" + minutos.ToString("D2");
+
+    
+            string[] mensajes = {
+                "TRIAGE INVÁLIDO - revisar recepción.",
+                "Su cita estimada es a las " + horaFormateada
+            };
+            string estado = mensajes[Convert.ToInt32(esValido)];
+
+            // ---------- 9. SALIDA ----------
+            Console.WriteLine("\n-------------------------------------------");
+            Console.WriteLine("           TICKET DE TURNO EPS");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine($"TURNO GENERADO: {tipoAtencion}-{primeros2Doc}-{minutosLlegada}");
+            Console.WriteLine($"PACIENTE: {nombre}");
+            Console.WriteLine($"ESTADO: {estado}");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine($"Tiempo total acumulado en sala: {tiempoTotalEspera} min");
+            Console.WriteLine($"Índice de congestión actual: {indiceCongestion}");
+            Console.WriteLine("-------------------------------------------\n");
+        }
+    }
+}
