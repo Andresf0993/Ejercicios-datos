@@ -1,0 +1,28 @@
+using System;
+public class caso_1
+{
+    public static void Main(String[]Args)
+    {
+        int puntaje;
+        Console.WriteLine("indique su puntaje:");
+        puntaje=Convert.ToInt32(Console.ReadLine());
+
+        if (puntaje >= 800)
+        {
+        Console.WriteLine("Aprovado con tasa preferencial.");
+        }
+        else if ( puntaje >= 600 && puntaje <= 799)
+            {
+            Console.WriteLine("Aprovado con tasa estandar.");
+            }
+
+            else if (puntaje < 600)
+            {
+            Console.WriteLine("credito denegado"); 
+            }
+    
+
+        
+    
+}
+}
