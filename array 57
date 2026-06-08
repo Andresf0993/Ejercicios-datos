@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
+public class ejercicio_3
+{
+    public static void Main (String[] Args)
+    {
+    int [] montos = {300, 200, 400, 150, 12000, 50};
+
+    Array.Sort(montos);
+
+    foreach (int monto in montos)
+    System.Console.WriteLine(monto);
+    }
+}
