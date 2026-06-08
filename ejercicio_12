@@ -1,0 +1,26 @@
+using System;
+
+public class caso_1
+{
+    public static void Main  (string [] Args)
+    {
+        double x,y;
+        
+
+    Console.WriteLine ("----Bienvenido al calculo de distancia ----");
+
+    Console.WriteLine ("indique la distancia en x ");
+    double.TryParse(Console.ReadLine(), out x);
+
+    Console.WriteLine ("indique la distancia en y ");
+    double.TryParse(Console.ReadLine(), out y);
+
+double x2 = Math.Pow(x,2);
+double y2 = Math.Pow(y,2);
+double suma;
+suma =  x2 + y2;
+double hipo = Math.Sqrt(suma);
+
+Console.WriteLine("resultado en valor absoluto de la lectura es " + Math.Abs(hipo));
+    }
+}
