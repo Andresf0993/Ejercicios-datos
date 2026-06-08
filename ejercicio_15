@@ -1,0 +1,26 @@
+using System;
+
+public class caso_4
+{
+
+public static void Main(String[] Args)
+{
+
+    string firstName, lastName;
+
+    Console.WriteLine("Indique su  primer nombre ");
+    firstName = Console.ReadLine();
+
+    Console.WriteLine("Indique su  primer apellido ");
+    lastName = Console.ReadLine();
+
+    string dominio,name;
+
+    dominio= "@universitariadecolombia.com" ;
+    name = string.Concat(firstName, "." , lastName);
+
+
+    Console.WriteLine("su correo es: "+ name+dominio);
+
+}
+}
