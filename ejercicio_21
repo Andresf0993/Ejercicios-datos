@@ -1,0 +1,26 @@
+using System;
+public static class caso_10
+{
+    public static void Main(String[]Args)
+    {
+        string Produccion = "Produccion";
+        int num1,num2;
+
+
+        Console.WriteLine("indique el numero 1:");
+        num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("indique el numero 2:");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+        string Pro = Produccion.Substring(0,1);
+        int numMax = Math.Max(num1,num2);
+        string Proyecto = "Proyecto";
+        string carac = Proyecto.Substring(5,3);
+        string Mayus = carac.ToUpper();
+        string final = $"{Pro}{numMax}{Mayus}";
+
+        Console.WriteLine(final);
+
+    }
+}
