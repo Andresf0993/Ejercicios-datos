@@ -1,0 +1,27 @@
+using System;
+using System.Linq.Expressions;
+public class ejercicio_1
+{
+    public static void Main(String[]Args)
+    {
+        int x,y;
+
+        
+         Console.WriteLine("indique un numero para x");
+        x=Convert.ToInt32(Console.ReadLine());
+
+         Console.WriteLine("indique un numero para y");
+        y=Convert.ToInt32(Console.ReadLine());
+
+        if (x < y)
+        {
+            Console.WriteLine("x es menor que y");
+
+        }
+        else
+        {
+            Console.WriteLine ("x es mayor que y");
+        }
+    }
+
+}
