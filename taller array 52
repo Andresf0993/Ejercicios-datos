@@ -1,0 +1,16 @@
+using System;
+using System.Globalization;
+public class ejercicio_1
+{
+    public static void Main(String[]Arg)
+{
+    string [] dias = {"lunes" , "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"};
+    double [] temperaturas = {22, 23.5,18.3,25,26,27,25};
+
+    
+
+    temperaturas[2] = 25;
+
+    System.Console.WriteLine(temperaturas[2]);
+}
+}
