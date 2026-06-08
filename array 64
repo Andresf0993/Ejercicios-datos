@@ -1,0 +1,22 @@
+using System;
+
+public class ejercicio_5
+{
+    public static void Main(String[] Args)
+    {
+        int[] numeros = { 4, 7, 2, 9, 7, 3, 4, 8, 2, 5 };
+
+        Console.WriteLine("Números duplicados encontrados:");
+
+        for (int i = 0; i < numeros.Length; i++)
+        {
+            for (int j = i + 1; j < numeros.Length; j++)
+            {
+                if (numeros[i] == numeros[j])
+                {
+                    Console.WriteLine($"El número {numeros[i]} está duplicado (posiciones {i} y {j})");
+                }
+            }
+        }
+    }
+}
