@@ -1,0 +1,15 @@
+using System;
+public class caso_9
+{
+    public static void Main(String[]Args)
+    {
+        Console.WriteLine("Ingrese el codigo :");
+        string codigo = Console.ReadLine();
+
+        string sinE = codigo.Trim();
+        string nueva = sinE.Replace("OLD-", "NEW");
+        bool ing= nueva.Contains("ING");
+
+        Console.WriteLine("Codigo limpio:" + nueva + " Pertenese a la facultad de ingenieria?" + ing) ;
+    }
+}
