@@ -1,0 +1,20 @@
+using System;
+
+public class ejercicio_7
+{
+    public static void Main(String[] Args)
+    {
+        bool[,] asistencia = new bool[3, 5];
+
+        asistencia[1, 4] = true;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                Console.Write(asistencia[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
