@@ -1,0 +1,39 @@
+using System;
+using System.Linq.Expressions;
+public class ejercicio_1
+{
+    public static void Main(String[]Args)
+    {
+        int nota;
+
+        
+        Console.WriteLine("indique su nota:");
+        nota=Convert.ToInt32(Console.ReadLine());
+
+        if (nota>=80)
+        {
+            Console.WriteLine("su nota es A");
+        }
+        else if (nota>= 50)
+        {
+            Console.WriteLine("su nota es B");
+
+        }
+        else if (nota>= 30)
+        {
+            Console.WriteLine("su nota es C");
+        }
+        else {
+        
+    using System.Threading;
+    
+    Thread.Sleep(2000);
+    
+        Console.WriteLine("necesitas mejorar");
+    }
+
+    
+    }
+    
+
+}
