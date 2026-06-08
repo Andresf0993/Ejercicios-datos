@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+
+public class ejercicio_11
+{
+    public static void Main(String[] Args)
+    {
+        int[,] ventas = {
+            { 1200, 850, 1500, 600 },
+            { 1100, 900, 1600, 700 },
+            { 1300, 950, 1700, 800 },
+            { 1400, 1000, 1800, 900 }
+        };
+
+        int totalMes2 = 0;
+        for (int j = 0; j < ventas.GetLength(1); j++)
+        {
+            totalMes2 += ventas[1, j];
+        }
+        Console.WriteLine($"Total de ventas del mes 2: {totalMes2}");
+
+        int maximo = ventas.Cast<int>().Max();
+        Console.WriteLine($"Venta más alta en toda la matriz: {maximo}");
+    }
+}
