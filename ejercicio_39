@@ -1,0 +1,34 @@
+using System;
+using System.Net.Mail;
+public class caso_9
+{
+    public static void Main(String[]Args)
+    {
+        string mes;
+        
+        
+        Console.WriteLine("indique el mes del year:");
+        mes = Console.ReadLine();
+        
+        if (mes == "diciembre" || mes == "enero" || mes == "junio")
+        {
+        Console.WriteLine("Temporada Alta (Tarifa +30%)");
+        }
+
+        else if ( mes == "semana santa")
+            {
+            Console.WriteLine("Temporada Especial (Tarifa +50%)");
+            }
+
+            else if (mes == "febrero" || mes == "marzo" || mes == "mayo" || mes == "julio" || mes == "agosto" || mes == "septiembre"|| mes == "octubre" || mes == "noviembre")
+            {
+            Console.WriteLine("Temporada Baja (Tarifa base)"); 
+            }
+
+            else 
+        {
+            Console.WriteLine("mes incorrecto, intente de nuevo "); 
+        }
+    
+}
+}
