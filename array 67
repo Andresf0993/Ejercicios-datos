@@ -1,0 +1,14 @@
+using System;
+
+public class ejercicio_8
+{
+    public static void Main(String[] Args)
+    {
+        double[,] precios = {
+            { 1500, 2300, 4500 },
+            { 1450, 2400, 4600 }
+        };
+
+        Console.WriteLine($"Precio del segundo producto en la primera tienda: {precios[0, 1]}");
+    }
+}
