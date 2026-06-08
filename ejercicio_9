@@ -1,0 +1,21 @@
+using System;
+
+namespace Miejercicio2
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            Console.WriteLine("Ingrese el número de pruebas unitarias superadas: ");
+            int npruebas = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("¿Pasó la revisión de seguridad? true/false");
+            bool revision =Convert.ToBoolean(Console.ReadLine());
+
+            bool esMayor = npruebas > 10;
+            bool aprobado = esMayor && revision;
+
+            Console.WriteLine( aprobado);    
+    }
+}
+}
