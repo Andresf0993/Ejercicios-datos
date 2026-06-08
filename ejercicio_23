@@ -1,0 +1,23 @@
+using System;
+
+public class ejercicio_1
+{
+
+class Car
+    {
+
+        string color;
+        int maxSpeed;
+    public static void Main(String[]Args)
+    {
+
+
+        Car myObj = new Car();
+        myObj.color = "Verde";
+        myObj.maxSpeed = 200;
+
+       Console.WriteLine(myObj.color);
+       Console.WriteLine(myObj.maxSpeed);
+    }
+    }
+}
