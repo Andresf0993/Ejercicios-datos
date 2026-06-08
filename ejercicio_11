@@ -1,0 +1,23 @@
+     using System;
+namespace Miejercicio2
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+         Console.WriteLine("Ingrese el número de Advertencias generados tras compilar el código: ");
+         int nadvertencias = Convert.ToInt32(Console.ReadLine());
+
+         Console.WriteLine("Ingrese el número de errores críticos tras compilar el código: ");
+         int nerrores = Convert.ToInt32(Console.ReadLine());
+
+         bool esMenor = nadvertencias < 55; 
+         bool esIgual = nerrores == 0;   
+      
+
+        bool aprobado = esMenor && esIgual;
+        Console.WriteLine("aprobado:" + aprobado); 
+
+        }
+    }
+}
